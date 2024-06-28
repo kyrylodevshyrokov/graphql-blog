@@ -23,3 +23,41 @@ This blog API allows you to manage posts and comments along with the ability to 
 4. Open browser and enter `http://localhost:4000` to start writing queries.
 
 ## Queries
+
+### Users
+
+Retrive information about users along with posts and comments that were created by each user. Each post contains informations about itself as well comments that are related to this post. Each comment contains information about itself as well the post under which this comment was created.
+
+```javascript
+users {
+    id
+    name
+    email
+    age
+    posts {
+      id
+      title
+      body
+      published
+      comments {
+        id
+        text
+        author {
+          id
+          name
+          age
+        }
+      }
+    }
+    comments {
+      id
+      text
+      post {
+        id
+        title
+        body
+        published
+      }
+    }
+  }
+```
