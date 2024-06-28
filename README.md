@@ -90,3 +90,28 @@ posts {
     }
   }
 ```
+
+### _Comments_
+
+Retrieve information about all existing comments along with posts under which this comments were created.
+
+```javascript
+comments {
+    id
+    text
+    author {
+      id
+      name
+      email
+      age
+    }
+    post {
+      id
+      title
+      body
+      published
+    }
+  }
+```
+
+## Mutations
