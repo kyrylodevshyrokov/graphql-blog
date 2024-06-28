@@ -220,7 +220,22 @@ Deletes the post.
 Creates new comment.
 
 ```javascript
-
+createComment(data: {
+    text: "Nice post!"
+    post: "your_post_id"
+    author: "your_user_id"
+  }) {
+    id
+    text
+    author {
+      id
+      name
+    }
+    post {
+      id
+      title
+    }
+  }
 ```
 
 ### _updateComment_
@@ -228,7 +243,12 @@ Creates new comment.
 Updates the comment.
 
 ```javascript
-
+updateComment(id: "your_comment_id" data: {
+    text: "Updated comment to post"
+  }) {
+    id
+    text
+  }
 ```
 
 ### _deleteComment_
@@ -236,5 +256,8 @@ Updates the comment.
 Deletes the comment.
 
 ```javascript
-
+deleteComment(id: "your_comment_id") {
+    id
+    text
+  }
 ```
