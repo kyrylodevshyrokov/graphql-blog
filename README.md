@@ -115,3 +115,49 @@ comments {
 ```
 
 ## Mutations
+
+### _createUser_
+
+Creates a new user.
+
+```javascript
+createUser(data: {
+    name: "John Doe"
+    email: "john@gmail.com"
+    age: 22
+  }) {
+    id
+    name
+    email
+    age
+  }
+```
+
+### _updateUser_
+
+Updates the user.
+
+```javascript
+updateUser(id: "your_user_id", data: {
+    name: "John Doe 2"
+    age: 40
+  }) {
+    id
+    name
+    email
+    age
+  }
+```
+
+### _deleteUser_
+
+Deletes the user.
+
+```javascript
+deleteUser(id: "your_user_id") {
+    id
+    name
+    email
+    age
+  }
+```
