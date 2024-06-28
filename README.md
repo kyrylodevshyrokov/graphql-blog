@@ -161,3 +161,80 @@ deleteUser(id: "your_user_id") {
     age
   }
 ```
+
+### _createPost_
+
+Creates new post.
+
+```javascript
+createPost(data: {
+    title: "New post"
+    body: "THis is a new post"
+    published: true
+    author: "your_author_id"
+  }) {
+    id
+    title
+    body
+    published
+    author {
+      id
+      name
+      email
+    }
+  }
+```
+
+### _updatePost_
+
+Updates the post.
+
+```javascript
+updatePost(id: "your_post_id" data: {
+    title: "Updated post"
+    body: "This is the updated post"
+    published: false
+  }) {
+    id
+    title
+    body
+    published
+  }
+```
+
+### _deletePost_
+
+Deletes the post.
+
+```javascript
+  deletePost(id: "your_post_id") {
+    id
+    title
+    body
+    published
+  }
+```
+
+### _createComment_
+
+Creates new comment.
+
+```javascript
+
+```
+
+### _updateComment_
+
+Updates the comment.
+
+```javascript
+
+```
+
+### _deleteComment_
+
+Deletes the comment.
+
+```javascript
+
+```
