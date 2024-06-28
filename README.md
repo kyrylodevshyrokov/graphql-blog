@@ -24,9 +24,9 @@ This blog API allows you to manage posts and comments along with the ability to 
 
 ## Queries
 
-### Users
+### _Users_
 
-Retrive information about users along with posts and comments that were created by each user. Each post contains informations about itself as well comments that are related to this post. Each comment contains information about itself as well the post under which this comment was created.
+Retrieve information about users along with posts and comments that were created by each user. Each post contains informations about itself as well comments that are related to this post. Each comment contains information about itself as well the post under which this comment was created.
 
 ```javascript
 users {
@@ -57,6 +57,35 @@ users {
         title
         body
         published
+      }
+    }
+  }
+```
+
+### _Posts_
+
+Retrieve informations about all existing posts along with comments that were created under each post. Each post and comment has author field.
+
+```javascript
+posts {
+    id
+    title
+    body
+    published
+    author {
+      id
+      name
+      email
+      age
+    }
+    comments {
+      id
+      text
+      author {
+        id
+        name
+        email
+        age
       }
     }
   }
